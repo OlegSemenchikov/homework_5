@@ -1,6 +1,6 @@
 .man {
     width: 300px;
-    height: 300px;
+    height: 350px;
     margin: auto;
     display: grid;
     align-items: center;
@@ -18,37 +18,122 @@
 
 }
 .man__body{
-    border-top: 100px solid #000;
+    border-top: 100px solid yellow;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     height: 0;
     width: 80px;
-    margin-top: -120px;
+    margin-top: -160px;
+}
+.man__hand{
+    position: absolute;
+    top: 148px;
+    left: 91px;
+    width: 85px;
+    height: 1px;
+    background: green;
+    transform-origin: 0 0;
+    transform: rotate(97deg);
+    animation: hand 1s infinite;
+}
+@keyframes hand {
+    0%,100%{
+        transform: rotate(83deg);
+    }
+    50%{
+        transform: rotate(97deg);
+    }
+}
+.man__wrist{
+    position: absolute;
+    width: 35px;
+    height: 1px;
+    background: blue;
+    transform-origin: 0 0;
+    top: 232px;
+    left: 80px;
+    animation: wrist 1s infinite;
+
+}
+@keyframes wrist {
+    0%{
+        transform: rotate(0deg);
+        top: 232px;
+        left: 100px;
+    }
+    50%{
+        top: 232px;
+        left: 81px;
+    }
+    100%{
+        transform: rotate(-360deg);
+        top: 232px;
+        left: 100px;
+    }
 }
 .circle{
-    width: 40px;
-    height: 40px;
-    background: red;
-    border-radius: 25px;
+    width: 20px;
+    height: 20px;
+    background: #FF0000;
+    border-radius: 10px;
     position: absolute;
-
-    animation: circ 4s infinite;
+    animation: circ 2s infinite cubic-bezier(1,.06,.6,.97);
 }
 @keyframes circ{
     0%,100%{
         top:220px;
-        left: 100px;
+        left: 110px;
     }
     30%{
         top: 20px;
-        left: 40px;
+        left: 70px;
     }
-    60%{
+    64%{
         top: 220px;
-        left: 20px;
+        left: 30px;
     }
-    80%{
-         top: 260px;
-         left: 40px;
+    67%{
+        top: 230px;
+        left: 31px;
+    }
+    70%{
+        top: 240px;
+        left: 35px;
+    }
+    73%{
+         top: 248px;
+         left: 42px;
+    }
+    76%{
+        top: 254px;
+        left: 50px;
+    }
+    79%{
+        top: 258px;
+        left: 60px;
+    }
+    82%{
+        top: 260px;
+        left: 70px;
+    }
+    85%{
+        top: 258px;
+        left: 80px;
+    }
+    88%{
+        top: 254px;
+        left: 90px;
+    }
+    91%{
+        top: 248px;
+        left: 98px;
+    }
+    94%{
+        top: 240px;
+        left: 104px;
+    }
+    97%{
+        top: 230px;
+        left: 108px;
     }
 }
