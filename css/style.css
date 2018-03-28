@@ -1,0 +1,255 @@
+.position-absolute{
+    position: absolute;
+}
+.position-relative{
+    position: relative;
+}
+.background-black{
+    background: #000000;
+}
+.juggler_wrapper {
+    background: #ffffff;
+    width: 324px;
+    height: 354px;
+    top: 160px;
+    margin: auto;
+}
+.juggler__head{
+    width: 52px;
+    height: 70px;
+    border-radius: 26px/35px;
+    border: 1px solid #000000;
+    top: 63px;
+    left: 135px;
+}
+.juggler__body{
+    top: 147px;
+    left: 100px;
+    stroke: #000;
+    stroke-width: 1px;
+    fill: #fff;
+}
+.juggler__hand{
+    width: 110px;
+    height: 1px;
+    top: 148px;
+    background: #000000;
+    transform-origin: 0 0;
+    animation: hand 1s infinite;
+}
+.juggler__hand--right{
+    left: 101px;
+}
+.juggler__hand--left{
+    left: 225px;
+    animation: hand 1s infinite reverse;
+}
+@keyframes hand {
+    0%,100%{
+        transform: rotate(85deg);
+    }
+    50%{
+        transform: rotate(95deg);
+    }
+}
+.juggler__wrist{
+    width: 45px;
+    height: 1px;
+    top: 257px;
+    background: #000000;
+    transform-origin: 0 0;
+}
+.juggler__wrist--right {
+    animation: wrist--right 1s infinite;
+}
+@keyframes wrist--right {
+    0%{
+        transform: rotate(0deg);
+        left: 109px;
+    }
+    50%{
+        transform: rotate(-200deg);
+        left: 91px;
+    }
+    100%{
+        transform: rotate(-360deg);
+        left: 109px;
+    }
+}
+.juggler__wrist--left {
+    animation: wrist--left 1s infinite reverse;
+}
+@keyframes wrist--left {
+    0%{
+        transform: rotate(0deg);
+        left: 233px;
+    }
+    50%{
+        transform: rotate(-200deg);
+        left: 215px;
+    }
+    100%{
+        transform: rotate(-360deg);
+        left: 233px;
+    }
+}
+.ball{
+    z-index: 2;
+    width: 26px;
+    height: 26px;
+    background: #FF0000;
+    border-radius: 13px;
+    top: 230px;
+    left: 120px;
+    animation-fill-mode: backwards;
+}
+.ball--right-top{
+    animation: ball--right 2s linear infinite normal;
+    animation-delay: 0.1s;
+
+}
+.ball--right-bottom{
+    animation: ball--right 2s linear infinite normal;
+    animation-delay: 1.1s;
+}
+@keyframes ball--right{
+    0%,100%{
+        top: 230px;
+        left: 120px;
+    }
+    20%{
+        top: 62px;
+        left: 101px;
+    }
+    30%{
+        top: 20px;
+        left: 83px;
+    }
+    47%{
+        top: 62px;
+        left: 65px;
+    }
+    64%{
+        top: 230px;
+        left: 40px;
+    }
+    67%{
+        top: 240px;
+        left: 41px;
+    }
+    70%{
+        top: 250px;
+        left: 45px;
+    }
+    73%{
+        top: 258px;
+        left: 52px;
+    }
+    76%{
+        top: 264px;
+        left: 60px;
+    }
+    79%{
+        top: 268px;
+        left: 70px;
+    }
+    82%{
+        top: 270px;
+        left: 80px;
+    }
+    85%{
+        top: 268px;
+        left: 90px;
+    }
+    88%{
+        top: 264px;
+        left: 100px;
+    }
+    91%{
+        top: 258px;
+        left: 108px;
+    }
+    94%{
+        top: 250px;
+        left: 115px;
+    }
+    97%{
+        top: 240px;
+        left: 118px;
+    }
+}
+
+.ball--left-top{
+    animation: ball--left 2s linear infinite reverse;
+    animation-delay: 0.1s;
+}
+.ball--left-bottom{
+    animation: ball--left 2s linear infinite reverse;
+    animation-delay: 1.1s;
+}
+@keyframes ball--left{
+    0%,100%{
+        top: 230px;
+        left: 250px;
+    }
+    20%{
+        top: 62px;
+        left: 231px;
+    }
+    30%{
+        top: 20px;
+        left: 214px;
+    }
+    47%{
+        top: 62px;
+        left: 195px;
+    }
+    64%{
+        top: 230px;
+        left: 170px;
+    }
+    67%{
+        top: 240px;
+        left: 171px;
+    }
+    70%{
+        top: 250px;
+        left: 175px;
+    }
+    73%{
+        top: 258px;
+        left: 182px;
+    }
+    76%{
+        top: 264px;
+        left: 190px;
+    }
+    79%{
+        top: 268px;
+        left: 200px;
+    }
+    82%{
+        top: 270px;
+        left: 210px;
+    }
+    85%{
+        top: 268px;
+        left: 220px;
+    }
+    88%{
+        top: 264px;
+        left: 230px;
+    }
+    91%{
+        top: 258px;
+        left: 238px;
+    }
+    94%{
+        top: 250px;
+        left: 245px;
+    }
+    97%{
+        top: 240px;
+        left: 248px;
+    }
+}

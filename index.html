@@ -2,16 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Чел</title>
+    <title>Juggler</title>
     <link type="text/css" rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="man">
-        <div class="man__head"></div>
-        <div class="circle"></div>
-        <div class="man__body"></div>
-        <div class="man__hand"></div>
-        <div class="man__wrist"></div>
+<body class="background-black position-relative">
+    <div class="juggler_wrapper position-relative">
+        <div class="juggler__head position-absolute"></div>
+        <svg class="juggler__body position-absolute">
+            <polygon points="0,0 16,122 108,122 124,0"></polygon>
+        </svg>
+        <div class="juggler__hand juggler__hand--left position-absolute"></div>
+        <div class="juggler__wrist juggler__wrist--left position-absolute"></div>
+        <div class="juggler__hand juggler__hand--right position-absolute"></div>
+        <div class="juggler__wrist juggler__wrist--right position-absolute"></div>
+        <div class="ball ball--right-top position-absolute"></div>
+        <div class="ball ball--right-bottom position-absolute"></div>
+        <div class="ball ball--left-top position-absolute"></div>
+        <div class="ball ball--left-bottom position-absolute"></div>
     </div>
 </body>
 </html>
